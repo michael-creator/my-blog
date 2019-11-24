@@ -8,15 +8,16 @@
     {% else%}
     <title>welcome to My Blog page</title>
     {% endif %}
+   
 </head>
 {% block navbar %}
     {% include 'navbar.html' %}
 {% endblock %}
 <body>
-    
+<div class="container bg-personal">
 {% block content%}
 
 {% endblock %}
-
+</div>
 </body>
 </html>

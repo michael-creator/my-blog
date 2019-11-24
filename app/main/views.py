@@ -30,10 +30,10 @@ def index():
 
 @main.route('/login')
 def login():
-    title = "welcome to my blog post"
-    return render_template('index.html', title=title)
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
 
 @main.route('/register')
 def register():
-    
-    return render_template('register.html')
+    form = RegistrationForm()
+    return render_template('register.html', title='Rgister', form=form)

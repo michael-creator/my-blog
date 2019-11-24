@@ -1,8 +1,22 @@
 {% extends 'base.html'%}
 
-{%block content%}
+{% block content %}
+<div class="container">
+    <form action="post">
+        <Fieldset class="form-group">
+            <legend class="container-fluid"></legend>
+            <div class="form-group">
+                {{form.username.label(class"form-control-label")}}
+                {{form.username(class"form-control form-control-lg")}}
+            </div>
 
-    <h1>login to see your account</h1>
+
+        </Fieldset>
 
 
-{%endblock%}
+    </form>
+</div>
+   
+
+
+{% endblock %}

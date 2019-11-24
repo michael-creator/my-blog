@@ -1,6 +1,9 @@
 {% extends 'base.html'%}
-{% block content%}
 
-    <h1>welcome to my blog post web page</h1>
-
+{%block content%}
+{% for post in posts %}
+    <h1>{{post.title}} </h1>
+    <p> by {{ post.author }} on {{post.date_posted }}</p>
+    <p>{{ post.content}}</p>
+{% endfor %}
 {%endblock%}

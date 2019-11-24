@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from . import main 
+
 
 
 posts = [
@@ -31,3 +32,8 @@ def index():
 def login():
     title = "welcome to my blog post"
     return render_template('index.html', title=title)
+
+@main.route('/register')
+def register():
+    
+    return render_template('register.html')

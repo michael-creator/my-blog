@@ -26,3 +26,8 @@ posts = [
 @main.route('/')
 def index():
     return render_template('index.html', posts=posts)
+
+@main.route('/login')
+def login():
+    title = "welcome to my blog post"
+    return render_template('index.html', title=title)

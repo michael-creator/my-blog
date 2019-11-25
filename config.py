@@ -1,6 +1,6 @@
 import os
 class Config:
-    pass
+    SECRET_KEY="a9f5c99073afb2"
 
 class ProdConfig(Config):
     pass

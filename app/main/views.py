@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
-from . import main 
+from . import main
+from .forms import RegistrationForm, LoginForm
 
 
 
@@ -21,6 +22,12 @@ posts = [
         'title': 'business blog',
         'content': '3blog  content',
         'date_posted': 'april 22, 2019'
+    },
+         {
+        'author': 'PRofessor',
+        'title': 'Ideologyg',
+        'content': '$4blog  content',
+        'date_posted': 'april 22, 2019'
     }
 ]
 
@@ -31,7 +38,7 @@ def index():
 @main.route('/login')
 def login():
     form = LoginForm()
-    return render_template('login.html', title='Login', form=form)
+    return render_template('login.html', form=form)
 
 @main.route('/register')
 def register():

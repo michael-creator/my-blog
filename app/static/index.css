@@ -1,3 +1,40 @@
 body{
     text-align: center;
+    background-image: url('../static/photos/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    background-color: #F1F1F1;
+    text-align: center;
+  }
+  
+  h1{
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    color:white;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

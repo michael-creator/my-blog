@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Orbitron&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/index.css">
+<!-- <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}"> -->
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  {{wtf.quick_form(form)}}
+</div>
+{% endblock %}

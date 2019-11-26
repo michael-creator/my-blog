@@ -1,0 +1,8 @@
+ id | username |          email           | role_id |                                          pass_secure                                           | bio | profile_pic_path | password_hash 
+----+----------+--------------------------+---------+------------------------------------------------------------------------------------------------+-----+------------------+---------------
+  1 | paul     |                          |         |                                                                                                |     |                  | 
+  2 | michael  |                          |         |                                                                                                |     |                  | 
+  3 | mike     | mikelkarije@gmail.com    |         | pbkdf2:sha256:150000$HvIjWxQf$750f4e63d712f7353b5119a2a25c300174cd12500324479030ee4638c5a4aa20 |     |                  | 
+  4 | tenny    | paultennison06@gmail.com |         | pbkdf2:sha256:150000$LXD4koee$296136db2fc98a282187f5b3022ba790963408186ca24e2f6804a23cf373bb43 |     |                  | 
+(4 rows)
+

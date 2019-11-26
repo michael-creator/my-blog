@@ -2,13 +2,25 @@
 
 {% block styles%}
 {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Orbitron&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/index.css">
+<!-- <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}"> -->
 {% endblock %}
 
 {%block content%}
 {% for post in posts %}
-    <h1>{{post.title}} </h1>
-    <p> by {{ post.author }} on {{post.date_posted }}</p>
-    <p>{{ post.content}}</p>
+<div class="container">
+<div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-blue">
+      <h1>{{post.title}}</h1>
+    </header>
+</div>
+
+    <div class="card">
+    <p> by {{ post.author }} on {{post.date_posted }}</p></div>
+    <div class="card">
+    <p>{{ post.content}}</p></div>
+</div>
+   
 {% endfor %}
 {%endblock%}

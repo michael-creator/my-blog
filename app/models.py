@@ -9,11 +9,9 @@ class User(UserMixin,db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(280))
     email = db.Column(db.String(255),unique = True,index = True)
-    role_id = db.Column(db.Integer, db.ForeignKey('role.id'))
     pass_secure = db.Column(db.String(255))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
-    
     password_hash = db.Column(db.String(255))
     @login_manager.user_loader
     def load_user(user_id):

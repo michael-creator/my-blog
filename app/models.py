@@ -2,7 +2,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from . import db
 from flask_login import UserMixin
 from . import login_manager
-
+from datetime import datetime
 
 class User(UserMixin,db.Model):
     __tablename__ = 'users'

@@ -19,3 +19,9 @@ class LoginForm(FlaskForm):
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Tell us more  about you.',validators = [DataRequired()])
     submit = SubmitField('Submit')
+    
+    
+class PostForm(FlaskForm):
+     title = StringField('Title', validators=[DataRequired()])
+     content = TextAreaField('Content',validators=[DataRequired()])
+     submit = SubmitField('Post')

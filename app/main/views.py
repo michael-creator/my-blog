@@ -1,13 +1,13 @@
 from flask import Flask, render_template, url_for, flash, redirect, abort,request
 from . import main
-from .forms import RegistrationForm, LoginForm,UpdateProfile
+from .forms import RegistrationForm, LoginForm,UpdateProfile ,PostForm
 from flask_login import login_required
 from ..models import User
 from .. import db,photos
 
 posts = [
     {
-        'author': 'mikel karije',
+        'author': 'dancan dante',
         'title': 'funny blog',
         'content': 'In France, a chemist named Pilatre de Rozier tested the flammability of hydrogen by gulping a mouthful and blowing across an open flame, proving at a stroke that hydrogen is indeed explosively combustible and that eyebrows are not necessarily a permanent feature of one’s face.',
         'date_posted': 'april 22, 2019'
@@ -81,3 +81,13 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
+
+@main.route('/post/new',methods = ['GET','POST'])
+@login_required
+def new_post():
+    
+    form = PostForm()
+    if form.validate_on_submit():
+        flash('The Post Has been Updated', 'successful')
+        return redirect(url_for('home'))
+    return render_template('new_post.html', title='New Post', form=form)
